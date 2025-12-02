@@ -97,18 +97,23 @@ Checklist for security reviews, threat modeling, dependency vulnerability checks
 ## Escalation Path
 
 ### When to Escalate
-- Critical or high severity vulnerability discovered
-- Potential data breach or security incident
-- Compliance violation identified
-- Security blocking release
+
+Escalate security concerns when any of the following conditions are met:
+
+- [ ] Critical or high severity vulnerability discovered
+- [ ] Potential data breach or security incident
+- [ ] Compliance violation identified
+- [ ] Security blocking release
 
 ### Escalation Contacts
+
+> **Note:** Customize these roles to match your organization's structure. The levels below are examples.
 
 | Level | Role | When to Contact |
 |-------|------|-----------------|
 | 1 | Security Champion | First point of contact for security questions |
 | 2 | Security Team Lead | Unresolved issues, critical vulnerabilities |
-| 3 | CISO / Security Director | Incidents, breaches, executive decisions |
+| 3 | Security Director / CISO | Incidents, breaches, executive decisions |
 | 4 | Legal / Compliance | Regulatory issues, breach notifications |
 
 ### Escalation Process
@@ -121,6 +126,8 @@ Checklist for security reviews, threat modeling, dependency vulnerability checks
 ---
 
 ## Sign-off
+
+> **Note:** Customize roles to match your organization's structure.
 
 | Role | Name | Date | Signature |
 |------|------|------|-----------|
