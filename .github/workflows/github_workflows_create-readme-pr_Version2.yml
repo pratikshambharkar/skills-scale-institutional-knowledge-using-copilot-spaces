@@ -35,7 +35,7 @@ jobs:
           cat > docs/README.md <<'EOF'
 # OctoAcme Project Management Docs
 
-OctoAcme's project management docs collect our workflows, templates, and playbooks so teams can start work quickly and consistently. This README serves as the primary landing page and index for program-level processes stored in this folder.
+OctoAcme project management docs collect our workflows, templates, and playbooks so teams can start work quickly and consistently. This README serves as the primary landing page and index for program-level processes stored in this folder.
 
 OctoAcme follows a lightweight, repeatable lifecycle: Initiation, Planning, Execution, Release, and Close & Retrospective. Initiation clarifies the problem, measurable goals, stakeholders, and a one-pager to capture success metrics and constraints. Planning breaks approved initiatives into a prioritized backlog, estimates, and a milestone/release plan that surfaces dependencies and risks. Execution focuses on short iterations, visible tracking, and an explicit PR + CI policy that keeps changes small and reviewable. Release uses standardized pre-release checks, smoke verifications, and a rollback/incident playbook to reduce risk. Retrospectives capture learnings as action items that feed back into the backlog.
 
