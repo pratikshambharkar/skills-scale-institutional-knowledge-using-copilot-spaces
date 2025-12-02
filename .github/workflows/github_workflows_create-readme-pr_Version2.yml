@@ -1,4 +1,3 @@
-```yaml
 name: Create OctoAcme README PR
 
 on:
@@ -36,13 +35,13 @@ jobs:
           cat > docs/README.md <<'EOF'
 # OctoAcme Project Management Docs
 
-OctoAcme's project management docs collect our workflows, templates, and playbooks so teams can start work quickly and consistently. This README serves as the primary landing page and index for project management docs.
+OctoAcme's project management docs collect our workflows, templates, and playbooks so teams can start work quickly and consistently. This README serves as the primary landing page and index for program-level processes stored in this folder.
 
-OctoAcme follows a lightweight, repeatable lifecycle: Initiation, Planning, Execution, Release, and Close & Retrospective. Initiation clarifies the problem, measurable goals, stakeholders, and a one-page plan.
+OctoAcme follows a lightweight, repeatable lifecycle: Initiation, Planning, Execution, Release, and Close & Retrospective. Initiation clarifies the problem, measurable goals, stakeholders, and a one-pager to capture success metrics and constraints. Planning breaks approved initiatives into a prioritized backlog, estimates, and a milestone/release plan that surfaces dependencies and risks. Execution focuses on short iterations, visible tracking, and an explicit PR + CI policy that keeps changes small and reviewable. Release uses standardized pre-release checks, smoke verifications, and a rollback/incident playbook to reduce risk. Retrospectives capture learnings as action items that feed back into the backlog.
 
-Key workflows and roles: teams track work on a project board (Backlog -> Ready -> In Progress -> In Review -> QA -> Done). Pull requests should be small and include the issue link and acceptance criteria.
+Key workflows and roles: teams track work on a project board (Backlog → Ready → In Progress → In Review → QA → Done). Pull requests should be small and include the issue link, acceptance criteria, and pass CI/security checks before merge. A simple Risk Register tracks ID, impact, owner, and mitigation and is reviewed in weekly syncs. Core personas are Product Manager (PdM) who defines outcomes and success metrics; Project Manager (PM) who coordinates delivery, risks, and stakeholder comms; Developers who implement and test; and QA who verifies acceptance criteria and staging smoke tests.
 
-Communication and quality assurance: regular rhythms (daily standups, weekly delivery syncs, PM+PdM alignment, monthly stakeholder updates) keep teams aligned and provide escalation points. QA relies on defined acceptance criteria and testing steps.
+Communication and quality assurance: regular rhythms (daily standups, weekly delivery syncs, PM+PdM alignment, monthly stakeholder updates) keep teams aligned and provide escalation points. QA relies on unit and integration tests, security scans in CI, smoke/end-to-end checks for critical flows, and manual acceptance testing when necessary. Before any release, follow the Release & Deployment checklist and publish release notes and status in the project README.
 
 Quick links
 - docs/octoacme-project-management-overview.md
@@ -63,7 +62,7 @@ EOF
       - name: Commit changes
         run: |
           git add docs/README.md
-          git commit -m "docs: add docs/README.md -- OctoAcme project management summary & index" || echo "No changes to commit"
+          git commit -m "docs: add docs/README.md — OctoAcme project management summary & index" || echo "No changes to commit"
 
       - name: Push branch
         run: git push --set-upstream origin docs/add-project-management-readme
@@ -72,9 +71,9 @@ EOF
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "docs: add docs/README.md -- OctoAcme project management summary & index"
+          commit-message: "docs: add docs/README.md — OctoAcme project management summary & index"
           branch: docs/add-project-management-readme
-          title: "docs: Add README for OctoAcme Project Management Docs -- summary & links"
+          title: "docs: Add README for OctoAcme Project Management Docs — summary & links"
           body: |
             This PR adds docs/README.md as a landing page and index for OctoAcme project management processes.
 
