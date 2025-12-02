@@ -20,6 +20,12 @@ Documents in this directory
 - docs/octoacme-retrospective-and-continuous-improvement.md
 - docs/octoacme-roles-and-personas.md
 
+Templates and Checklists
+- docs/templates/release-checklist.md — Pre-release and deployment checklist
+- docs/templates/onboarding-checklist.md — New team member and project onboarding checklist
+- docs/templates/raci-guidance.md — RACI matrix guidance and examples
+- docs/templates/security-checklist.md — Security review and threat modeling checklist
+
 How to use these docs
 - Keep the Project Charter / one‑pager and project README up to date in each project's repo.
 - Add process‑specific artifacts into .copilot/ if you want Copilot Spaces to use them as context for exercises.
